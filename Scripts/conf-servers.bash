@@ -21,3 +21,4 @@ sudo ufw status
 sudo apt-get install mysql-server -y
 ## Check status for Apache2 Server
 sudo systemctl status mysql.service
+
