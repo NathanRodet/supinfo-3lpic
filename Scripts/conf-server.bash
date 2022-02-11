@@ -1,24 +1,9 @@
 #!/bin/sh
 #######################################
 
-# Bash script to install an Apache2/Create UserAdmin for MySQL. For Ubuntu based systems.
+# Bash script to install an Apache2. For Ubuntu based systems.
 
 ######################################
-
-## Before the script
-
-# root -i
-sudo apt-get install net-tools
-# sudo apt-get install git-all -y
-# sudo git config --global user.name "NathanRodet"
-# sudo git config --global user.mail rodetnathan.contact@gmail.com
-# mkdir git-repos
-# cd git-repos
-# git clone https://github.com/NathanRodet/linux-project
-# cd linux-project/
-# cd Scripts/
-# chmod +x conf-server.bash
-# ./conf-server.bash
 
 # Update packages and Upgrade system
 sudo apt update -y && sudo apt-get upgrade -y
@@ -29,8 +14,5 @@ sudo apt install php -y
 sudo apt install libapache2-mod-php -y
 sudo apt install mysql-server -y
 sudo apt install php-mysql -y
+sudo /etc/init.d/apache2 restart
 
-# Check 
-# ifconfig | grep inet # Use the ip to check the localhost
-
-# Check 
