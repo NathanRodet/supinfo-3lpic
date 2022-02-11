@@ -1,5 +1,6 @@
 ## Before scripts
 
+
 # root -i
 # sudo apt-get install net-tools
 # sudo apt-get install git-all -y
@@ -20,3 +21,6 @@
 # sudo nano /var/www/html/test.php
 # Add <?php echo 'it works?'; ?>
 ## Go check at the url xx.xx.xx.xx/test.php it must be working
+
+## Set Hostname
+# hostnamectl set-hostname ‘name’
