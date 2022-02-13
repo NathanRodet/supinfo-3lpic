@@ -25,3 +25,6 @@ apt install haproxy -t wheezy-backports
 # $UDPServerRun 514
 ## Create a separate file 'haproxy.conf' under '/etc/rsyslog.d' directory
 # sudo nano /etc/rsyslog.d/haproxy.conf
+## Add the following line to end the of the file 
+# local2.*	/var/log/haproxy.log
+# service rsyslog restart 
