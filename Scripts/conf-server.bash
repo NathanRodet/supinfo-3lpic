@@ -1,7 +1,8 @@
 #!/bin/sh
 #######################################
 
-# Bash script to install an Apache2 and dependanciesy
+# Bash script to install LAMP Stack
+
 ######################################
 
 ## Update packages and Upgrade system
@@ -16,9 +17,9 @@ sudo apt install php-mysql -y
 ## Restart apache2 to apply changes
 sudo /etc/init.d/apache2 restart
 
-## Create Cron to get update for script repository every hour
-sudo crontab -l > cron_gitupdate
-sudo echo "0 * * * * cd /repos/linux-project && git pull" >> cron_gitupdate
-sudo crontab cron_gitupdate
-sudo rm cron_gitupdate
-
+## Test Apache 2
+# ifconfig | grep inet 
+## Use the ip to check the localhost
+# sudo nano /var/www/html/test.php
+# Add <?php echo 'it works?'; ?>
+## Go check at the url x.x.x.x/test.php it must be working

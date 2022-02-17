@@ -1,0 +1,18 @@
+## loadbalancer-001
+
+## Update /etc/netplan/ and network configuration using :
+# cd /etc/netplan/ && sudo nano 01-static-config.yaml
+
+## Configuration to copy
+# network:
+#  version: 2
+#  ethernets:
+#   ens33:
+#    dhcp4: no
+#    addresses: [10.0.0.5/24]
+#    gateway4: 10.0.0.2
+#    nameservers:
+#     addresses: [8.8.8.8, 1.1.1.1]
+
+## Apply changes
+# sudo netplan apply
