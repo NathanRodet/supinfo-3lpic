@@ -1,0 +1,37 @@
+## Before scripts
+
+
+## On a server :
+sudo apt install net-tools -y
+sudo apt install openssh-server -y
+sudo apt install git-all -y
+sudo git config --global user.name "NathanRodet"
+sudo git config --global user.mail rodetnathan.contact@gmail.com
+sudo mkdir repos
+cd repos
+sudo git clone https://github.com/NathanRodet/linux-project
+cd linux-project/
+sudo git switch develop
+cd Scripts/
+sudo chmod +x conf-server.bash
+sudo ./conf-server.bash
+# ...
+
+## Netplan to change ip to static
+## 8.8.8.8 = google DNS | 1.1.1.1 = cloudflare DNS
+#
+
+sudo netplan apply 
+
+
+
+## Set Hostname
+# hostnamectl set-hostname ‘name’
+
+## Create Cron to get update for script repository every hour
+# crontab -r
+# crontab -l > cron_gitupdate
+# echo "* * * * * cd ~/repos/linux-project/ &&  sudo git pull" >> cron_gitupdate
+# echo "* * * * * cd ~/repos/linux-project/ && echo Git Update - `date` >> update.log" >> cron_gitupdate
+# crontab cron_gitupdate
+# rm cron_gitupdate
