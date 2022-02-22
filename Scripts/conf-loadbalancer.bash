@@ -20,15 +20,3 @@ ufw reload
 # Command in documenation
 
 #haproxy -c -f /etc/haproxy/haproxy.cfg
-
-## Go to
-# sudo nano /etc/rsyslog.conf
-## Uncomment ModLoad and UDPServerRun, Here our Server will listen to Port 514 to collect the logs into syslog.
-# Provides UDP syslog reception
-# $ModLoad imudp
-# $UDPServerRun 514
-## Create a separate file 'haproxy.conf' under '/etc/rsyslog.d' directory
-# sudo nano /etc/rsyslog.d/haproxy.conf
-## Add the following line to end the of the file
-# local2.*	/var/log/haproxy.log
-# service rsyslog restart

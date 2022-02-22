@@ -18,8 +18,3 @@ INSERT INTO $table (UserId, Note) VALUES (1, "$note");
 EOF
 
 rm -f $codefilepy
-
-For the first fact, i'll say when I was a kid, I were young
-For the second one, Tarkov is way better than PUBG, but you'll understand it in a hundred years
-For the third one, I never saw a real dolphin
-and for the last and fourth one, I've never been canoeing before
