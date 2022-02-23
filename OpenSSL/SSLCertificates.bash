@@ -10,5 +10,8 @@ sudo openssl req -new -key servercert.key -out servercert.csr
 # IT
 # server-001
 # nathan.rodet@supinfo.com
+
+test
+
 sudo openssl x509 -in servercert.csr -out servercert.crt -req -signkey servercert.key
 sudo openssl x509 -in servercert.crt -out servercert.pem -outform PEM
