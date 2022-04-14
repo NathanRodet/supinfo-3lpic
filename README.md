@@ -1,2 +1,2 @@
 # linux-project
-LAMP Stack
+LAMP Stack and infrastructure
